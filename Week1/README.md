@@ -300,9 +300,6 @@
   - Apabila aplikasi berbentuk Web App maka perlu mendeploy ke server. Kita dapat menggunakan tools seperti **Netlify**
   - Masuk pada netlify.com 
   - Masuk ke tab Sites, lalu drag n drop seluruh folder html
-  -
-  -
-  -
-  
+
   
 
