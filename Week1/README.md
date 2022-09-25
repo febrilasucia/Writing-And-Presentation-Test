@@ -222,7 +222,6 @@
   - Pada Visual Studio Code terdapat Extention bernama Live Server. Fungsinya, programmer dapat melihat perubahan html tanpa merefresh halaman karena sudah auto reload 
 
   Contoh :
-
 - Tag HTML
   - Gambar
     - Src atau source adalah  attribute untuk memberitahukan sumber gambar 
