@@ -166,3 +166,139 @@
   ```
   - Jika link dapat terbaca oleh server Github, nantinya semua file yang berkaitan dengan link tersebut akan di unduh menuju lokasi yang telah kita tetapkan sebelumnya. Lama proses pengunduhan menyesuaikan dengan jumlah serta ukuran file yang terdapat pada repositori Github.
   - Jika proses pengunduhan telah selesai dilakukan, nantinya pada direktori yang di tuju, akan terdapat sebuah direktori yang memiliki nama yang sama dengan nama dari repositori yang kita clone. Artinya, file hasil clone telah siap untuk digunakan.
+
+## **DAY 2**
+
+---
+
+### **HTML**
+- HTML ada singkatan dari Hypertext Markup Language
+- Pada sebuah Website, HTML adalah sebagai 'kerangka' yang memberi struktur pada website. Html juga dapat menampilkan beberapa konten seperti gambar, video, audio, teks dan masih banyak lagi
+- Tools Pendukung dalam menggunakan HTML
+  - Browser 
+  - Code Editor
+-  HTML Tag
+    ```
+    <p>My First Paragraph</p>
+
+    ```
+    ```<p>``` => Opening Tag<br>
+    ```</p>``` => Closing Tag <br>
+    ```My First Paragraph``` => Html Content
+- Struktur Dokumen HTML
+    ```
+    <!DOCTYPE html>
+    <html>
+      <head>
+        ...
+      </head>
+      <body>
+        ...
+      </body>
+    </html>
+    ```
+- Contoh HTML sederhana 
+  ```
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>My Website</title>
+      <link href="coba.css" type="text/css" rel="stylesheet"/>
+  </head>
+      <body>
+          <div>
+              <h1 class="header">Hi! This is my Website</h1>
+              <p>I love learning and sharing</p>
+          </div>
+      </body>
+  </html>
+  ```
+  Hasilnya :
+
+- Live Server dari Visual Studio Code 
+  - Dalam menjalankan HTML diperlukan lokasi file html untuk membukanya dalam via browser. Tapi setiap melakukan perubahan , perlu melakukan refresh halaman. 
+  - Pada Visual Studio Code terdapat Extention bernama Live Server. Fungsinya, programmer dapat melihat perubahan html tanpa merefresh halaman karena sudah auto reload 
+
+  Contoh :
+
+- Tag HTML
+  - Gambar
+    - Src atau source adalah  attribute untuk memberitahukan sumber gambar 
+    - Alt atau alternative adalah dalah satu atribut alternatif apaliba gambar yang tidak bisa ditampilkan maka akan digantikan dengan kalimat alternatif.
+    - Dalam menampilkan gambar bisa melalui file lokal komputer atau menggunakan link dari internet
+
+    Contoh : 
+    ```
+    <img src="image/logo.jpg" alt="logo">
+    ```
+  - Video
+    - Video merupakan double closing tag sehingga kita menaruh konten di antara opening dan closing
+    - Controls berguna untuk kita bisa mengatur videonya di play / pause dan indikator menit
+    Contoh :
+    ```
+    <video>
+      <source src="movie.mp4" type="video/mp4">
+    </video>
+    ```
+  - Table
+    - Sebuah tabel terdiri dari baris dan kolom
+    - Ada 3 tag untuk membuat tabel
+      - ```<table>```  elemen utama
+      - ```<tr>``` table row tag
+      - ```<td>``` table data tag
+    Contoh :
+    ```
+    <table>
+      <tr>
+        <th>Nama</th>
+        <th>Nomor Telpon</th>
+        <th>Negara</th>
+      </tr>
+      <tr>
+        <td>Sarah</td>
+        <td>0811111111</td>
+        <td>Indonesia</td>
+      </tr>
+      <tr>
+        <td>Sophia</td>
+        <td>0822222222</td>
+        <td>Indonesia</td>
+      </tr>
+    </table>
+    ```
+    Hasilnya :
+- Semantic HTML 
+  - Semantic artinya element html yang sesuai dengan kebutuhan konten.
+  - Meningkatkan Accessibility
+  - Meningkatkan SEO
+  - Lebih mudah di maintain
+  
+  Contohnya :
+  ```
+  <div class="header"> ==> <header>
+
+  <article>
+  <aside>
+  <details>
+  <figcaption>
+  <figure>
+  <footer>
+  <header>
+  <main>
+  <mark>
+  <nav>
+  <section>
+  <summary>
+  <time>
+  ```
+  
+- DEPLOY
+  - Deploy adalah sebuah proses untuk menyebarkan aplikasi yang sudah dibuat dengan tujuan dapat digunakan oleh orang-orang.  
+  - Apabila aplikasi berbentuk mobule, maka perlu mendeploy ke Google Play Store/App Store
+  - Apabila aplikasi berbentuk Web App maka perlu mendeploy ke server. Kita dapat menggunakan tools seperti **Netlify**
+  - Masuk pada netlify.com 
+  - Masuk ke tab Sites, lalu drag n drop seluruh folder html
+  
+
