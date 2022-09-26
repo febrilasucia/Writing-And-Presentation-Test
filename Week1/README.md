@@ -1,10 +1,13 @@
 # **Writing and Presentation Test**
+![image](https://user-images.githubusercontent.com/82355658/192155172-514ef809-b1c1-427f-9bc0-9c695df48e4a.png)
 
 ## **DAY 1**
 
 ---
 
 ### **Unix Command Line**
+
+![image](https://user-images.githubusercontent.com/82355658/192155241-490e8d04-cbae-48d2-b61e-1f59fe2b66d6.png)
 
 - Shell merupakan program khusus yang menyediakan komunikasi langsung antara pengguna dan sistem operasi
 - Shell terbagi menjadi dua, Shell yang berbasis teks disebut dengan _Command Line Interface_ (CLI) dan shell berbasis grafis disebut dengan _Graphical user interface_ (GUI)
@@ -117,6 +120,7 @@
     ```
 
 ### **Git dan Github**
+![image](https://user-images.githubusercontent.com/82355658/192155327-8c576490-f8c2-4154-9183-d1c0d7c5c19c.png)
 
 - Git dan Github merupakan tools yang biasanya digunakan oleh para programmer sebagai tempat penyimpanan file pemrograman mereka, karena lebih efektif.
 - Git dan Github berbeda. Developer yang menggunakan Git dapat menggunakan command-line tool, yaitu pengubah kode dan dapat digabungkan menuju perangkat lokal. Sedangkan, GitHub menyediakan interface grafis berbasis cloud sebagai tempat untuk melakukan seluruh tugas
@@ -180,7 +184,6 @@
 -  HTML Tag
     ```
     <p>My First Paragraph</p>
-
     ```
     ```<p>``` => Opening Tag<br>
     ```</p>``` => Closing Tag <br>
@@ -197,6 +200,12 @@
       </body>
     </html>
     ```
+    > ```<!DOCTYPE html> ``` => Tag yang menyatakan dokumen html<br>
+    ```<html>``` => root elemen yang mana membungkus dari keseluruhan dokumen html <br>
+    ```<head> ``` => elemen untuk memanggil css, judul website, dll <br>
+    ```<body>``` => elemen yang tampak dan merupakan konten seperti gambar, video, teks dll
+    ``` ```
+
 - Contoh HTML sederhana 
   ```
   <!DOCTYPE html>
@@ -217,21 +226,28 @@
   ```
   Hasilnya :
 
+  ![image](https://user-images.githubusercontent.com/82355658/192154359-f3f7731d-f632-458c-9ace-187b9fd08985.png)
+
 - Live Server dari Visual Studio Code 
   - Dalam menjalankan HTML diperlukan lokasi file html untuk membukanya dalam via browser. Tapi setiap melakukan perubahan , perlu melakukan refresh halaman. 
   - Pada Visual Studio Code terdapat Extention bernama Live Server. Fungsinya, programmer dapat melihat perubahan html tanpa merefresh halaman karena sudah auto reload 
+  - Klik extensions > search *Live server* > install
+  ![image](https://user-images.githubusercontent.com/82355658/192154455-9db3de6b-9c04-4bc0-ba30-fd5a3a5866b9.png)
+  - untuk melihatnya, klik kanan pada file > open with live server, maka hasilnya 
+  ![image](https://user-images.githubusercontent.com/82355658/192154632-05b09415-ad9c-4b97-aba7-ec657d4ad3a5.png)
 
-  Contoh :
 - Tag HTML
   - Gambar
     - Src atau source adalah  attribute untuk memberitahukan sumber gambar 
     - Alt atau alternative adalah dalah satu atribut alternatif apaliba gambar yang tidak bisa ditampilkan maka akan digantikan dengan kalimat alternatif.
     - Dalam menampilkan gambar bisa melalui file lokal komputer atau menggunakan link dari internet
-
     Contoh : 
     ```
     <img src="image/logo.jpg" alt="logo">
     ```
+    Hasil :
+    ![image](https://user-images.githubusercontent.com/82355658/192154799-30ec4c72-ea27-4b48-85b4-5d2bf0cd614f.png)
+
   - Video
     - Video merupakan double closing tag sehingga kita menaruh konten di antara opening dan closing
     - Controls berguna untuk kita bisa mengatur videonya di play / pause dan indikator menit
@@ -241,6 +257,10 @@
       <source src="movie.mp4" type="video/mp4">
     </video>
     ```
+    Hasil :
+
+    ![image](https://user-images.githubusercontent.com/82355658/192154869-0a7e8a47-8b4c-434e-96ff-990d01ba177a.png)
+
   - Table
     - Sebuah tabel terdiri dari baris dan kolom
     - Ada 3 tag untuk membuat tabel
@@ -249,7 +269,7 @@
       - ```<td>``` table data tag
     Contoh :
     ```
-    <table>
+    <table border="1">
       <tr>
         <th>Nama</th>
         <th>Nomor Telpon</th>
@@ -268,6 +288,9 @@
     </table>
     ```
     Hasilnya :
+
+    ![image](https://user-images.githubusercontent.com/82355658/192154977-7dadeb3f-5ac0-467d-96db-5a928165300f.png)
+
 - Semantic HTML 
   - Semantic artinya element html yang sesuai dengan kebutuhan konten.
   - Meningkatkan Accessibility
