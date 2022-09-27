@@ -825,3 +825,152 @@ Peserta mampu memahami dan membedakan control flow (conditional dan looping)
 - OR !!
 - NOT !
   Contoh:
+#### CONDITIONAL
+1. Pengenalan
+   Conditional merupakan statemen percabangan yang menggambarkan suatu kondisi. Apakah kondisi tersebut TRUE (benar) atau FALSE (salah). Apabila TRUE maka code akan dijalankan
+   Contoh :
+   - IF Statement
+      ```
+      if(true){
+        console.log('This message will print!');
+      };
+      //Prints "This message will print"
+
+      let lapar = true;
+      if(lapar){
+        console.log('Yuk makan');
+      };
+      ```
+    - IF ELSE Statement
+      ```
+      let lapar = false;
+      if(lapar){
+        console.log('Yuk makan');
+      }else{
+        console.log('Tidak makan'); 
+      };
+      //Program akan menampilkan statement pada else
+      ```
+    - IF.. ELSE IF Statement
+      let lapar = false;
+      if(lapar){
+        console.log('Yuk makan nasi');
+      }else if{
+        console.log('Yuk beli cemilan'); 
+      }else if{
+        console.log('Yuk buat gorengan'); 
+      }else{
+        console.log('Males makan'); 
+      };
+      
+      ```
+  - TRUTHY AND FALSY ASSIGNMENT
+    Jika kita memiliki sebuah website dan meminta inputan username lalu menampilkannya. Jisa usernamenya kosong kita bisa isi nilai tersebut.
+    Contoh :
+    let defaultName;
+    if (username) {
+      defaultName = username;
+    }else {
+      defaultName = 'Stranger'
+    }
+  
+  - SWITCH CASE CONDITIONAL
+    Biasanya digunakan untuk kondisi dan percabanyan terlalu banyak.
+    ```
+    var buttonPushed = 1;
+    switch(buttonPushed){
+      case  1;
+            console.log('matikan TV!);
+            break;
+      case  2;
+            console.log('turunkan volume TV!);
+            break;
+      case  3;
+            console.log('tingkatkan TV!);
+            break;
+      case  4;
+            console.log('matikan suara TV!);
+            break;
+      default;
+            console.log('Tidak terjadi apa-apa');
+            break; 
+    }
+    ```
+  - Ternary Operator
+    Ternary Operator merupakan short-syntax dari statement if ... else.
+    Contoh :
+    ```
+    let isNowSale = true;
+    isNowSale ? console.log('Lest shopping now') : console.log('Sjopping Later');
+    ```
+#### FUNCTION
+ 1. Function adalah sebuah blok kode sebuah grup untuk menyelesaikan 1 task/1 fitur.
+    Contoh :
+    ```
+    function greeting(){
+      return 'Hello Beban Keluarga';
+    }
+    ```
+    > ```function``` function keyword
+    > ```greeting``` identifier
+    > ```return'...';``` function body
+
+  2. Default Parameters, digunakan untuk memberikan nilai awal/default pada parameter function
+    Contoh :
+    ```
+    function greetOnWebsite(name = 'Stranger') {
+      return 'Hello ' + name;
+    }
+
+    console.log(greetOnWebsite('David')); //Prints : 'Hello David'
+    console.log(greetOnWebsite()); //Prints : 'Hello Stranger'
+    ```
+  
+  3. Function Helper
+    ```
+    function multiplyByNineFifths(number){
+      return number * (9/5);
+    };
+
+    function getFahtenheit(celsius){
+      return multiplyByNineFifths(celcius) + 32);
+    };
+    
+    getFahrenheit(15); ///Prints : 59
+    ```
+  
+  4. Arrow Function, cara lain menuliskan function.
+     ```
+     const greeting = () => {
+      return 'Hello World'
+     }
+     ```
+  5. Short Syntax Function
+     - Zero Parameters
+       ```
+       const functionName = () => {};
+       ```
+     - One Parameter
+       ```
+       const functionName = paramOne => {};
+       ```
+     - Two or More Parameters
+       ```
+       const functionName = (paramOne, paramTwo) => {};
+       ```
+     - Single-Line Block
+       ```
+       const sumNumbers = number => number + number;
+       ```
+     - Multi Line Block
+       ```
+       const sumNumbers = number => {
+        const sum = number + number;
+        return sum;
+       };
+       ```
+
+
+
+
+
