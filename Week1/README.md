@@ -600,7 +600,6 @@ Hasil :
     ```
 
     ![image](https://user-images.githubusercontent.com/82355658/192438891-e3df5197-92b5-4638-9f5c-2f08c9691f69.png)
-    
 
   - Nilai centermenyelaraskan item fleksibel di tengah wadah:
 
@@ -611,9 +610,8 @@ Hasil :
     align-items: center;
   }
   ```
-  ![image](https://user-images.githubusercontent.com/82355658/192433231-78dbad72-c04f-4dc2-b2bc-17ff5aa3e7bb.png)
 
-  
+  ![image](https://user-images.githubusercontent.com/82355658/192433231-78dbad72-c04f-4dc2-b2bc-17ff5aa3e7bb.png)
 
 ## **DAY 4**
 
@@ -736,3 +734,94 @@ Hasil :
     return false;
   }
   ```
+
+## **DAY 5**
+
+---
+
+Peserta mampu memahami dan membedakan control flow (conditional dan looping)
+
+### **Java Script**
+
+#### **Intro JavaScript**
+
+1. Pengertian
+
+- Javascript adalah bahasa pemograman yang sangat powerful yang digunakan untuk logic pada sebuah website
+- Javascript juga dapat membuat website menjadi interaktif dan dinamis
+
+2. Menjalankan JavaScript
+
+- Dijalankan memlalui browser
+
+3. Syntax dan Statement JavaScript
+
+- Alert()
+- Prompt()
+- Confirm()
+- Console Log
+  - Console log adalah tempat kita untuk cek logic pemograman web yang kita kembangkan
+  - Console log juga tempat kita untuk melakukan debugging (mengetahui error pada code) pada pemograman web
+- Comment
+  - Comments adalah sintaks yang digunakan untuk memberi keterangan tentang suatu statement. Menggunakan bahasa inggris atau bahasa indonesia.
+  - Jenis-jenis Comment
+    - Single Comments
+      ```
+      // Prints 5 to the console
+      ```
+    - Multiline Comments
+      /_
+      This is all commented
+      console.log(10);
+      None of this is going to run!
+      console.log(99);
+      _/
+
+4. Tipe Data (Data Types)
+
+- Pengertian
+  Tipe data adalah klasifikasi yang kita berikan untuk berbagai macam data yang digunakan dalam programming.
+- Jenis-jenis
+  - number => mengandung semua angka termasuk desimal
+  - string => gup karakter yang ada pada keyboadr laptio/PC seperti hurud, angka, spasi dan symbol
+  - boolean => mempunyai 2 nilai yaitu `TRUE` or `FALSE`
+  - null => data tidak memiliki nilai
+  - undefined => tipe data yang merepresentasikan variabel/data yang tidak memiliki nilai, biasanya terjadi karena eror, atau tidak disengajakan
+  - object => dapat menyimpan data dengan tipe data apapun
+
+5. Variabel
+   - Var
+   - Let
+   - Const
+6. Operator
+
+- Assignment Operator, digunakan untu menyimpan sebuah nilai pada variabel
+  Contoh :
+- Increment dan Decrement
+  Contoh:
+
+- Operator Aritmatika
+
+  - Tambah(+)
+  - Kurang(-)
+  - Perkalian(\*)
+  - Pembagian(/)
+  - Modulus(%)
+    Contoh:
+
+- Comparison Operator
+  Comparison operator adalah operator yang membandingkan satu nilai dengan yang lain, hasil operasi berupa `true` or `false`
+
+  - <
+  - >
+  - <=
+  - > =
+  - ===
+  - !==
+    Contoh:
+
+- Operator Logika, biasa digunakan untuk sebuah conditional pada pemograman, hasilnya berupa `true` or `false`
+- AND &&
+- OR !!
+- NOT !
+  Contoh:
