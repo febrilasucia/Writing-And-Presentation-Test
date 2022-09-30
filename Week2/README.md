@@ -196,6 +196,9 @@ Untuk mendebug kode JSm adalah dengan console.log() variabel yang ingin anda per
 6. Handling Errors
 - ???
 
+## **DAY 2**
+
+---
 
 
 
