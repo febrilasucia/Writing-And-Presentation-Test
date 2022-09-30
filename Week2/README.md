@@ -199,6 +199,64 @@ Untuk mendebug kode JSm adalah dengan console.log() variabel yang ingin anda per
 ## **DAY 2**
 
 ---
+### JavaScript Dasar
+#### Data Type And Structure
+##### Pengertian 
+- JavaScript adalah bahasa dinamis dengan tipe dinamis. 
+- Variabel dalam JS tidak secara langsung terkait dengan jenis nilai tertentu dan variabel apapun dapat diberi nilai dari semua jenis
+Contoh :
+    ```
+    let foo = 42; // foo is now a number
+    foo = "bar"; // foo is now a string
+    foo = true; // foo is now a boolean
+    ```
+##### Jenis-jenis JavaScript
+###### 1. Nilai Primitif 
+Adalah data yang tidak dapat diubah diwakili pada tingkat bahasa terendah
+    - Boolean
+        - mempunyai dua nilai : `true` dan `false`
+    - Null
+        - memiliki tepat satu nilai: `null`
+    - Undefined
+        - sebuah variabel yang belum diberi nilai
+    - number
+        ECSMASCRIPT memiliki dua tipe yaitu number dan BigInt
+    - bigint
+        - Tipe BigInt adalah primitif numberik dalam JS yang dapat mewakili bilangan bulat denan presisi arbitrer.
+        - Dengan BigInts, Anda dapat dengan aman menyimpan dan mengoperasikan bilangan bulat besar bahkan di luar batas bilangan bulat aman untuk Numbers.
+        - BigInt dibuat dengan menambahkan nke akhir bilangan bulat atau dengan memanggil konstruktor.
+        - Anda dapat memperoleh nilai aman terbesar yang dapat ditambahkan dengan Numbers dengan menggunakan konstanta Number.MAX_SAFE_INTEGER. Dengan diperkenalkannya BigInts, Anda dapat beroperasi dengan angka di luar Number.MAX_SAFE_INTEGER.
+        Contoh :
+        ```
+        // BigInt
+        const x = BigInt(Number.MAX_SAFE_INTEGER); // 9007199254740991n
+        x + 1n === x + 2n; // false because 9007199254740992n and 9007199254740993n are unequal
+
+        // Number
+        Number.MAX_SAFE_INTEGER + 1 === Number.MAX_SAFE_INTEGER + 2; // true because both are 9007199254740992
+        ```
+        - Anda dapat menggunakan operator +, *, -, **, dan %dengan BigInts—seperti halnya dengan Numbers. BigInt tidak sepenuhnya sama dengan Angka, tetapi secara longgar begitu.
+        - BigInt berperilaku seperti Angka jika diubah menjadi boolean: if, ||, &&, Boolean, !.
+        - BigInts tidak dapat dioperasikan secara bergantian dengan Numbers. Sebaliknya a TypeErrorakan dilempar.
+    - String
+        - Jenis String JavaScript digunakan untuk mewakili data tekstual. Ini adalah satu set "elemen" dari nilai integer 16-bit unsigned.
+        - Gunakan string untuk data tekstual. Saat mewakili data kompleks, parsing string, dan gunakan abstraksi yang sesuai.
+    - types of symbol
+        - Simbol adalah nilai primitif yang unik dan tidak dapat diubah dan dapat digunakan sebagai kunci dari properti Objek (lihat di bawah). Dalam beberapa bahasa pemrograman, Simbol disebut "atom".
+
+###### 2. Objek (kumpulan properti)
+Dalam ilmu komputer, objek adalah nilai dalam memori yang mungkin dirujuk oleh pengidentifikasi
+- **Properti** 
+    - Ada dua jenis properti objek: properti data dan properti pengakses .
+    
+    - Setiap properti memiliki atribut yang sesuai . Setiap atribut diakses secara internal oleh mesin JavaScript, tetapi Anda dapat mengaturnya melalui Object.defineProperty(), atau membacanya melalui Object.getOwnPropertyDescriptor().
+    - **Properti Data**
+    Properti data mengaitkan kunci dengan nilai. Hal ini dapat dijelaskan dengan atribut berikut:
+        - `value` => Nilai yang diambil oleh akses get properti. Dapat berupa nilai JavaScript apa pun.
+        - `writeable` => Nilai boolean yang menunjukkan apakah properti dapat diubah dengan penugasan.
+        - `enumerable` => Nilai boolean yang menunjukkan jika properti dapat dihitung dengan for...inloop. Lihat juga Enumerabilitas dan kepemilikan properti untuk mengetahui bagaimana enumerabilitas berinteraksi dengan fungsi dan sintaks lainnya.
+        - `configurable` => Nilai boolean yang menunjukkan apakah properti dapat dihapus, dapat diubah menjadi properti pengakses, dan dapat mengubah atributnya.
+    - **Properti Data**
 
 
 
