@@ -258,30 +258,34 @@ Adalah data yang tidak dapat diubah diwakili pada tingkat bahasa terendah
 
 - **Boolean**
   - mempunyai dua nilai : `true` dan `false`
-- **Null** 
-    - memiliki tepat satu nilai: `null`
-- Undefined 
-    - sebuah variabel yang belum diberi nilai
+- **Null**
+  - memiliki tepat satu nilai: `null`
+- Undefined
+  - sebuah variabel yang belum diberi nilai
 - **Number**
-    - ECSMASCRIPT memiliki dua tipe yaitu number dan BigInt
-- **Bigint** 
-    - Tipe BigInt adalah primitif numberik dalam JS yang dapat mewakili bilangan bulat denan presisi arbitrer. - Dengan BigInts, Anda dapat dengan aman menyimpan dan mengoperasikan bilangan bulat besar bahkan di luar batas bilangan bulat aman untuk Numbers. - BigInt dibuat dengan menambahkan nke akhir bilangan bulat atau dengan memanggil konstruktor. - Anda dapat memperoleh nilai aman terbesar yang dapat ditambahkan dengan Numbers dengan menggunakan konstanta Number.MAX_SAFE_INTEGER. Dengan diperkenalkannya BigInts, Anda dapat beroperasi dengan angka di luar Number.MAX_SAFE_INTEGER.
-    Contoh :
-    ```java
-        // BigInt
-        const x = BigInt(Number.MAX_SAFE_INTEGER); 
-        // 9007199254740991n
-        x + 1n === x + 2n; 
-        // false because 9007199254740992n and 9007199254740993n are unequal
+  - ECSMASCRIPT memiliki dua tipe yaitu number dan BigInt
+- **Bigint**
 
-        // Number
-        Number.MAX_SAFE_INTEGER + 1 === Number.MAX_SAFE_INTEGER + 2; 
-        // true because both are 9007199254740992
-    ```
-    > Keterangan
-    > > - Anda dapat menggunakan operator +, *, -, **, dan %dengan BigInts—seperti halnya dengan Numbers. BigInt tidak sepenuhnya sama dengan Angka, tetapi secara longgar begitu.
-    > > - BigInt berperilaku seperti Angka jika diubah menjadi boolean: if, ||, &&, Boolean, !.
-    > > - BigInts tidak dapat dioperasikan secara bergantian dengan Numbers. Sebaliknya a TypeErrorakan dilempar.
+  - Tipe BigInt adalah primitif numberik dalam JS yang dapat mewakili bilangan bulat denan presisi arbitrer. - Dengan BigInts, Anda dapat dengan aman menyimpan dan mengoperasikan bilangan bulat besar bahkan di luar batas bilangan bulat aman untuk Numbers. - BigInt dibuat dengan menambahkan nke akhir bilangan bulat atau dengan memanggil konstruktor. - Anda dapat memperoleh nilai aman terbesar yang dapat ditambahkan dengan Numbers dengan menggunakan konstanta Number.MAX_SAFE_INTEGER. Dengan diperkenalkannya BigInts, Anda dapat beroperasi dengan angka di luar Number.MAX_SAFE_INTEGER.
+    Contoh :
+
+  ```java
+      // BigInt
+      const x = BigInt(Number.MAX_SAFE_INTEGER);
+      // 9007199254740991n
+      x + 1n === x + 2n;
+      // false because 9007199254740992n and 9007199254740993n are unequal
+
+      // Number
+      Number.MAX_SAFE_INTEGER + 1 === Number.MAX_SAFE_INTEGER + 2;
+      // true because both are 9007199254740992
+  ```
+
+  > Keterangan
+  >
+  > > - Anda dapat menggunakan operator +, \*, -, \*\*, dan %dengan BigInts—seperti halnya dengan Numbers. BigInt tidak sepenuhnya sama dengan Angka, tetapi secara longgar begitu.
+  > > - BigInt berperilaku seperti Angka jika diubah menjadi boolean: if, ||, &&, Boolean, !.
+  > > - BigInts tidak dapat dioperasikan secara bergantian dengan Numbers. Sebaliknya a TypeErrorakan dilempar.
 
 - **String** - Jenis String JavaScript digunakan untuk mewakili data tekstual. Ini adalah satu set "elemen" dari nilai integer 16-bit unsigned. - Gunakan string untuk data tekstual. Saat mewakili data kompleks, parsing string, dan gunakan abstraksi yang sesuai.
 - **types of symbol** - Simbol adalah nilai primitif yang unik dan tidak dapat diubah dan dapat digunakan sebagai kunci dari properti Objek (lihat di bawah). Dalam beberapa bahasa pemrograman, Simbol disebut "atom".
@@ -313,7 +317,7 @@ Dalam ilmu komputer, objek adalah nilai dalam memori yang mungkin dirujuk oleh p
   console.log(typeof 42);
   // expected output: "number"
 
-  console.log(typeof 'blubber');
+  console.log(typeof "blubber");
   // expected output: "string"
 
   console.log(typeof true);
@@ -321,50 +325,59 @@ Dalam ilmu komputer, objek adalah nilai dalam memori yang mungkin dirujuk oleh p
 
   console.log(typeof undeclaredVariable);
   // expected output: "undefined"
-
   ```
+
 ---
+
 ## **CONTOH DEMO**
+
 ---
+
 ### **STRING**
+
 ```javascript
-  let hewan = "kAnciL"
+let hewan = "kAnciL";
 
-  console.log("ini adalah "+ hewan); // kAnciL
-  console.log(`ini adalah ${hewan}`); // kAnciL
-  console.log(typeof hewan)
+console.log("ini adalah " + hewan); // kAnciL
+console.log(`ini adalah ${hewan}`); // kAnciL
+console.log(typeof hewan);
 
-  //properties
-  console.log(hewan.length); // 6
+//properties
+console.log(hewan.length); // 6
 
-  //method
-  console.log(hewan.toUpperCase()) // KANCIL
-  console.log(hewan.toLowerCase()) //kancil
-  console.log(hewan.charAt(1)) // A  
-  console.log(hewan[1]) // A
-  console.log(hewan.include("n"))//true
-  console.log(hewan.include("n"))//true
-  console.log(hewan.include("b"))//false
+//method
+console.log(hewan.toUpperCase()); // KANCIL
+console.log(hewan.toLowerCase()); //kancil
+console.log(hewan.charAt(1)); // A
+console.log(hewan[1]); // A
+console.log(hewan.include("n")); //true
+console.log(hewan.include("n")); //true
+console.log(hewan.include("b")); //false
 ```
-  String.prototype.includes()
-  Method ini berfungsi untuk mencari sebuah string dalam kumpulan string. Jika ditemukan maka nilanya `true`, jikalau tida ditemukan maka `false`
-  Contoh :
 
-  ```javascript
-  const sentence = 'The quick brown fox jumps over the lazy dog.';
+String.prototype.includes()
+Method ini berfungsi untuk mencari sebuah string dalam kumpulan string. Jika ditemukan maka nilanya `true`, jikalau tida ditemukan maka `false`
+Contoh :
 
-  const word = 'fox';
+```javascript
+const sentence = "The quick brown fox jumps over the lazy dog.";
 
-  console.log(`The word "${word}" ${sentence.includes(word) ? 'is' : 'is not'} in the sentence`);
-  // expected output: "The word "fox" is in the sentence"
-  ```
+const word = "fox";
 
-  String.prototype.split()
-  Method ini mengambil dan membagi sebuah string kedalam daftar substring terurut dengan mencari pola, menempatkan substring ini ke dalam array dan mengembalikan array.
+console.log(
+  `The word "${word}" ${
+    sentence.includes(word) ? "is" : "is not"
+  } in the sentence`
+);
+// expected output: "The word "fox" is in the sentence"
+```
 
-  let kalimat = "dengan menggunakan split(), kita dapat";
-  console.log("BEFORE", kalimat)
-  console.log("AFTER", kalimat.split(" "));
+String.prototype.split()
+Method ini mengambil dan membagi sebuah string kedalam daftar substring terurut dengan mencari pola, menempatkan substring ini ke dalam array dan mengembalikan array.
+
+let kalimat = "dengan menggunakan split(), kita dapat";
+console.log("BEFORE", kalimat)
+console.log("AFTER", kalimat.split(" "));
 
 ---
 
@@ -389,36 +402,37 @@ Ini mendefinisikan:
 - Metode untuk mengakses semua elemen HTML
 - Acara untuk semua elemen HTML
 
-> **NOTE** : 
+> **NOTE** :
 > Dengan kata lain: DOM HTML adalah standar untuk mendapatkan, mengubah, menambah, atau menghapus elemen HTML.
 
 ## Interface DOM
 
-- *HTML DOM* dapat diakses dengan *JavaScript* (dan dengan bahasan pemograman lainnya).
+- _HTML DOM_ dapat diakses dengan _JavaScript_ (dan dengan bahasan pemograman lainnya).
 - di DOM semua element HTML didefinisikan sebagai objek
 - Antarmuka pemrograman adalah properti dan metode dari setiap objek.
 - Properti adalah nilai yang bisa Anda dapatkan atau atur (seperti mengubah konten elemen HTML).
 - Metode adalah tindakan yang dapat Anda lakukan (seperti menambah atau menghapus elemen HTML).
 
 ### Contoh :
+
 Mengubah konten ( innerHTML) <p>elemen dengan id="demo":
 
 ```html
 <!DOCTYPE html>
 <html>
-<body>
-
+  <body>
     <h2>My First Page</h2>
-        <p id="demo"></p>
+    <p id="demo"></p>
 
-    <script>document.getElementById("demo").innerHTML = "Hello World!";</script>
-
-</body>
+    <script>
+      document.getElementById("demo").innerHTML = "Hello World!";
+    </script>
+  </body>
 </html>
-
 ```
 
 ### Hasil :
+
 ![image](https://user-images.githubusercontent.com/82355658/193412081-1f784149-aa1c-4632-a76a-265d9223a57c.png)
 
 ### Metode `getElementById`
@@ -472,3 +486,173 @@ Mengubah konten ( innerHTML) <p>elemen dengan id="demo":
 | Method                                                 | Description                                   |
 | :----------------------------------------------------- | :-------------------------------------------- |
 | document.getElementById(id).onclick = function(){code} | Adding event handler code to an onclick event |
+
+## **Elemen DOM HTML JavaScript**
+
+### Menemukan Elemen HTML
+
+#### 1. Menemukan elemen HTML dengan id
+
+Contoh:
+
+    ```html
+    <!DOCTYPE html>
+    <html>
+    <body>
+        <h2>JavaScript HTML DOM</h2>
+
+        <p id="intro">Finding HTML Elements by Id</p>
+        <p>This example demonstrates the <b>getElementsById</b> method.</p>
+
+        <p id="demo"></p>
+
+        <script>
+        const element = document.getElementById("intro");
+
+        document.getElementById("demo").innerHTML =
+            "The text from the intro paragraph is: " + element.innerHTML;
+        </script>
+    </body>
+    </html>
+    ```
+
+Hasil :
+image.png
+
+#### 2. Menemukan elemen HTML dengan nama tag
+
+    Contoh :
+
+    ```javascript
+    const element = document.getElementsByTagName("p");
+    ```
+
+#### 3. Menemukan elemen HTML dengan nama kelas
+
+    Contoh :
+
+    ```javascriptaku
+    const x = document.getElementsByClassName("intro");
+    ```
+
+#### 4. Menemukan elemen HTML dengan pemilih CSS
+
+    Contoh :
+
+    ```javascript
+    const x = document.querySelectorAll("p.intro");
+    ```
+
+#### 5. Menemukan elemen HTML dengan koleksi objek HTML
+
+    Contoh :
+
+    ```javascript
+    const x = document.forms["frm1"];
+    let text = "";
+    for (let i = 0; i < x.length; i++) {
+    text += x.elements[i].value + "<br>";
+    }
+    document.getElementById("demo").innerHTML = text;
+    ```
+
+Objek HTML berikut (dan koleksi objek) juga dapat diakses:
+
+- document.anchors
+- document.body
+- document.documentElement
+- document.embeds
+- document.forms
+- document.head
+- document.images
+- document.links
+- document.scripts
+- judul dokumen
+
+#### 6. Mengubah Konten HTML
+Cara termudah untuk memodifikasi konten elemen HTML adalah dengan menggunakan innerHTMLproperti.
+**SINTAKS**
+```javascript
+document.getElementById(id).innerHTML = new HTML
+```
+Contoh :
+
+```html
+<html>
+<body>
+
+    <p id="p1">Hello World!</p>
+
+    <script>
+    document.getElementById("p1").innerHTML = "New text!";
+    </script>
+</body>
+</html>
+```
+Hasil : 
+![image](https://user-images.githubusercontent.com/82355658/193440836-827d6727-2dc4-4d68-922d-a90c82361ca4.png)
+
+>Penjelasan:
+>> Dokumen HTML di atas berisi `<p>` elemen dengan `id="p1"`
+>> Kami menggunakan DOM HTML untuk mendapatkan elemen dengan `id="p1"`
+>> JavaScript mengubah konten ( innerHTML) elemen tersebut menjadi `"Teks baru!"`
+
+Contoh :
+```html
+    <!DOCTYPE html>
+    <html>
+    <body>
+
+    <h1 id="id01">Old Heading</h1>
+
+    <script>
+    const element = document.getElementById("id01");
+    element.innerHTML = "New Heading";
+    </script>
+
+    </body>
+    </html>
+```
+>Penjelasan : 
+> > Dokumen HTML di atas berisi <h1>elemen denganid="id01"
+> > Kami menggunakan DOM HTML untuk mendapatkan elemen denganid="id01"
+> > JavaScript mengubah konten ( innerHTML) elemen itu menjadi "Judul Baru"
+
+#### 7. Mengubah Nilai Atribut
+**SINTAKS**
+document.getElementById(id).attribute = new value
+
+**CONTOH**
+```html
+    <!DOCTYPE html>
+    <html>
+    <body>
+        <img id="myImage" src="smiley.gif">
+        <script>
+        document.getElementById("myImage").src = "landscape.jpg";
+        </script>
+    </body>
+    </html>
+```
+**HASIL**
+![image](https://user-images.githubusercontent.com/82355658/193441222-ff44f318-1054-47dc-afef-7a61f7bc0126.png)
+
+> Penjelasan
+> > Dokumen HTML di atas berisi <img>elemen denganid="myImage"
+> > Kami menggunakan DOM HTML untuk mendapatkan elemen denganid="myImage"
+> > JavaScript mengubah srcatribut elemen itu dari "smiley.gif" menjadi "landscape.jpg"
+
+#### 8. Konten HTML Dinamis
+JS dapat membuat konten yang dinamis
+**CONTOH**
+    ```html
+        <!DOCTYPE html>
+        <html>
+        <body>
+            <script>
+            document.getElementById("demo").innerHTML = "Date : " + Date(); 
+            </script>
+        </body>
+    ```
+**HASIL**
+![image](https://user-images.githubusercontent.com/82355658/193441393-9617e858-724e-42f6-9cfb-2636bcaa3c50.png)
