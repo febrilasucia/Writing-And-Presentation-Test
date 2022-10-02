@@ -252,7 +252,7 @@ foo = true; // foo is now a boolean
 
 ### **Jenis-jenis JavaScript**
 
-#### 1. Nilai Primitif
+#### **1. Nilai Primitif**
 
 Adalah data yang tidak dapat diubah diwakili pada tingkat bahasa terendah
 
@@ -260,7 +260,7 @@ Adalah data yang tidak dapat diubah diwakili pada tingkat bahasa terendah
   - mempunyai dua nilai : `true` dan `false`
 - **Null**
   - memiliki tepat satu nilai: `null`
-- Undefined
+- **Undefined**
   - sebuah variabel yang belum diberi nilai
 - **Number**
   - ECSMASCRIPT memiliki dua tipe yaitu number dan BigInt
@@ -298,7 +298,11 @@ Dalam ilmu komputer, objek adalah nilai dalam memori yang mungkin dirujuk oleh p
   - Ada dua jenis properti objek: properti data dan properti pengakses .
   - Setiap properti memiliki atribut yang sesuai . Setiap atribut diakses secara internal oleh mesin JavaScript, tetapi Anda dapat mengaturnya melalui Object.defineProperty(), atau membacanya melalui Object.getOwnPropertyDescriptor().
   - **Data Property**
-    Properti data mengaitkan kunci dengan nilai. Hal ini dapat dijelaskan dengan atribut berikut: - `value` => Nilai yang diambil oleh akses get properti. Dapat berupa nilai JavaScript apa pun. - `writeable` => Nilai boolean yang menunjukkan apakah properti dapat diubah dengan penugasan. - `enumerable` => Nilai boolean yang menunjukkan jika properti dapat dihitung dengan for...inloop. Lihat juga Enumerabilitas dan kepemilikan properti untuk mengetahui bagaimana enumerabilitas berinteraksi dengan fungsi dan sintaks lainnya. - `configurable` => Nilai boolean yang menunjukkan apakah properti dapat dihapus, dapat diubah menjadi properti pengakses, dan dapat mengubah atributnya.
+    Properti data mengaitkan kunci dengan nilai. Hal ini dapat dijelaskan dengan atribut berikut: 
+    - `value` => Nilai yang diambil oleh akses get properti. Dapat berupa nilai JavaScript apa pun. 
+    - `writeable` => Nilai boolean yang menunjukkan apakah properti dapat diubah dengan penugasan. 
+    - `enumerable` => Nilai boolean yang menunjukkan jika properti dapat dihitung dengan for...inloop. Lihat juga Enumerabilitas dan kepemilikan properti untuk mengetahui bagaimana enumerabilitas berinteraksi dengan fungsi dan sintaks lainnya. 
+    - `configurable` => Nilai boolean yang menunjukkan apakah properti dapat dihapus, dapat diubah menjadi properti pengakses, dan dapat mengubah atributnya.
   - **Accessor Property**
     - `get` => Fungsi yang dipanggil dengan daftar argumen kosong untuk mengambil nilai properti setiap kali akses get ke nilai dilakukan.
     - `set` => Fungsi yang dipanggil dengan argumen yang berisi nilai yang ditetapkan. Dieksekusi setiap kali properti tertentu dicoba untuk diubah.
@@ -474,7 +478,7 @@ Mengubah konten ( innerHTML) <p>elemen dengan id="demo":
 ### Menambah dan Menghapus Elemen
 
 | Method                          | Description                       |
-| :------------------------------ | :-------------------------------- | ----------------------- |
+| :------------------------------ | :-------------------------------- |
 | document.createElement(element) | Create an HTML element            |
 | document.removeChild(element)   | Remove an HTML element            |
 | document.appendChild(element)   | Add an HTML element               |
@@ -491,70 +495,70 @@ Mengubah konten ( innerHTML) <p>elemen dengan id="demo":
 
 ### Menemukan Elemen HTML
 
-#### 1. Menemukan elemen HTML dengan id
+#### **1. Menemukan elemen HTML dengan id**
 
 Contoh:
 
-    ```html
-    <!DOCTYPE html>
-    <html>
-    <body>
-        <h2>JavaScript HTML DOM</h2>
+```html
+<!DOCTYPE html>
+<html>
+  <body>
+    <h2>JavaScript HTML DOM</h2>
 
-        <p id="intro">Finding HTML Elements by Id</p>
-        <p>This example demonstrates the <b>getElementsById</b> method.</p>
+    <p id="intro">Finding HTML Elements by Id</p>
+    <p>This example demonstrates the <b>getElementsById</b> method.</p>
 
-        <p id="demo"></p>
+    <p id="demo"></p>
 
-        <script>
-        const element = document.getElementById("intro");
+    <script>
+      const element = document.getElementById("intro");
 
-        document.getElementById("demo").innerHTML =
-            "The text from the intro paragraph is: " + element.innerHTML;
-        </script>
-    </body>
-    </html>
-    ```
+      document.getElementById("demo").innerHTML =
+        "The text from the intro paragraph is: " + element.innerHTML;
+    </script>
+  </body>
+</html>
+```
 
 Hasil :
 image.png
 
-#### 2. Menemukan elemen HTML dengan nama tag
+#### **2. Menemukan elemen HTML dengan nama tag**
 
-    Contoh :
+Contoh :
 
-    ```javascript
-    const element = document.getElementsByTagName("p");
-    ```
+```javascript
+const element = document.getElementsByTagName("p");
+```
 
-#### 3. Menemukan elemen HTML dengan nama kelas
+#### **3. Menemukan elemen HTML dengan nama kelas**
 
-    Contoh :
+Contoh :
 
-    ```javascriptaku
-    const x = document.getElementsByClassName("intro");
-    ```
+```javascript
+const x = document.getElementsByClassName("intro");
+```
 
-#### 4. Menemukan elemen HTML dengan pemilih CSS
+#### **4. Menemukan elemen HTML dengan pemilih CSS**
 
-    Contoh :
+Contoh :
 
-    ```javascript
-    const x = document.querySelectorAll("p.intro");
-    ```
+```javascript
+const x = document.querySelectorAll("p.intro");
+```
 
-#### 5. Menemukan elemen HTML dengan koleksi objek HTML
+#### **5. Menemukan elemen HTML dengan koleksi objek HTML**
 
-    Contoh :
+Contoh :
 
-    ```javascript
-    const x = document.forms["frm1"];
-    let text = "";
-    for (let i = 0; i < x.length; i++) {
-    text += x.elements[i].value + "<br>";
-    }
-    document.getElementById("demo").innerHTML = text;
-    ```
+```javascript
+const x = document.forms["frm1"];
+let text = "";
+for (let i = 0; i < x.length; i++) {
+  text += x.elements[i].value + "<br>";
+}
+document.getElementById("demo").innerHTML = text;
+```
 
 Objek HTML berikut (dan koleksi objek) juga dapat diakses:
 
@@ -569,90 +573,109 @@ Objek HTML berikut (dan koleksi objek) juga dapat diakses:
 - document.scripts
 - judul dokumen
 
-#### 6. Mengubah Konten HTML
+---
+
+### **Mengubah HTML**
+
+---
+
+#### **1. Mengubah Konten HTML**
+
 Cara termudah untuk memodifikasi konten elemen HTML adalah dengan menggunakan innerHTMLproperti.
 **SINTAKS**
+
 ```javascript
-document.getElementById(id).innerHTML = new HTML
+document.getElementById(id).innerHTML = new HTML();
 ```
+
 Contoh :
 
 ```html
 <html>
-<body>
-
+  <body>
     <p id="p1">Hello World!</p>
 
     <script>
-    document.getElementById("p1").innerHTML = "New text!";
+      document.getElementById("p1").innerHTML = "New text!";
     </script>
-</body>
+  </body>
 </html>
 ```
-Hasil : 
+
+Hasil :
 ![image](https://user-images.githubusercontent.com/82355658/193440836-827d6727-2dc4-4d68-922d-a90c82361ca4.png)
 
->Penjelasan:
->> Dokumen HTML di atas berisi `<p>` elemen dengan `id="p1"`
->> Kami menggunakan DOM HTML untuk mendapatkan elemen dengan `id="p1"`
->> JavaScript mengubah konten ( innerHTML) elemen tersebut menjadi `"Teks baru!"`
+> Penjelasan:
+>
+> > Dokumen HTML di atas berisi `<p>` elemen dengan `id="p1"`
+> > Kami menggunakan DOM HTML untuk mendapatkan elemen dengan `id="p1"`
+> > JavaScript mengubah konten ( innerHTML) elemen tersebut menjadi `"Teks baru!"`
 
 Contoh :
-```html
-    <!DOCTYPE html>
-    <html>
-    <body>
 
+```html
+<!DOCTYPE html>
+<html>
+  <body>
     <h1 id="id01">Old Heading</h1>
 
     <script>
-    const element = document.getElementById("id01");
-    element.innerHTML = "New Heading";
+      const element = document.getElementById("id01");
+      element.innerHTML = "New Heading";
     </script>
-
-    </body>
-    </html>
+  </body>
+</html>
 ```
->Penjelasan : 
+
+> Penjelasan :
+>
 > > Dokumen HTML di atas berisi <h1>elemen denganid="id01"
 > > Kami menggunakan DOM HTML untuk mendapatkan elemen denganid="id01"
 > > JavaScript mengubah konten ( innerHTML) elemen itu menjadi "Judul Baru"
 
-#### 7. Mengubah Nilai Atribut
+#### **2. Mengubah Nilai Atribut**
+
 **SINTAKS**
 document.getElementById(id).attribute = new value
 
 **CONTOH**
+
 ```html
-    <!DOCTYPE html>
-    <html>
-    <body>
-        <img id="myImage" src="smiley.gif">
-        <script>
-        document.getElementById("myImage").src = "landscape.jpg";
-        </script>
-    </body>
-    </html>
+<!DOCTYPE html>
+<html>
+  <body>
+    <img id="myImage" src="smiley.gif" />
+    <script>
+      document.getElementById("myImage").src = "landscape.jpg";
+    </script>
+  </body>
+</html>
 ```
+
 **HASIL**
 ![image](https://user-images.githubusercontent.com/82355658/193441222-ff44f318-1054-47dc-afef-7a61f7bc0126.png)
 
 > Penjelasan
+>
 > > Dokumen HTML di atas berisi <img>elemen denganid="myImage"
 > > Kami menggunakan DOM HTML untuk mendapatkan elemen denganid="myImage"
 > > JavaScript mengubah srcatribut elemen itu dari "smiley.gif" menjadi "landscape.jpg"
 
-#### 8. Konten HTML Dinamis
+#### **3. Konten HTML Dinamis**
+
 JS dapat membuat konten yang dinamis
 **CONTOH**
-    ```html
-        <!DOCTYPE html>
-        <html>
-        <body>
-            <script>
-            document.getElementById("demo").innerHTML = "Date : " + Date(); 
-            </script>
-        </body>
-    ```
+
+```html
+<!DOCTYPE html>
+<html>
+  <body>
+    <script>
+      document.getElementById("demo").innerHTML = "Date : " + Date();
+    </script>
+  </body>
+</html>
+```
+
 **HASIL**
 ![image](https://user-images.githubusercontent.com/82355658/193441393-9617e858-724e-42f6-9cfb-2636bcaa3c50.png)
