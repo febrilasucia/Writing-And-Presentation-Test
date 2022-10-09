@@ -668,8 +668,15 @@ var askMom = function () {
 
 askMom();
 ```
+---
+## **DAY 5**
+
+---
 
 ### **WEB STORAGE**
+
+---
+
 #### **Pengertian**
 Ada beberapa cara untuk menyimpan data pengguna seperti pencarian, artikel berita, dan lain-lain ke lokal (browser) menggunakan web storage seperti cookies, local storage, dan session storage. Data ini dimanfaatkan oleh situs web tersebut untuk merekam kebiasaan pengguna agar dapat memberikan rekomendasi sesuai preferensi si pengguna tersebut.
 
@@ -685,7 +692,7 @@ Kekurangan Cookies
 - Cookies hanya dapat menyimpan data sebanyak 4KB.
 - Lalu cookies juga memiliki tanggal kadaluarsa. Tanggal ini telah ditentukan sehingga web browser bisa menghapus cookies jika tanggal sudah kadaluarsa atau tidak dibutuhkan.
 
-##### **Local Storage dan Session Storage**
+##### **Local Storage**
 Ciri-ciri Local Storage:
 1. Menyimpan data tanpa tanggal kadaluarsa.
 2. Data tidak akan dihapus ketika web browser ditutup dan akan tersedia seterusnya selama kita tidak menghapus data local storage pada web browser.
@@ -698,4 +705,25 @@ Untuk menyimpan data pada local storage, kita menggunakan method setItem() yang 
   localStorage.setItem('key', value);
 ```
 
+##### **Session Storage Menyimpan Data**
+Ciri-ciri session storage:
+- Data yang disimpan pada session storage akan terus tersimpan selama browser terbuka dan tidak hilang jika laman di-reload.
+- Membuka banyak tab/window dengan URL yang sama, akan menciptakan session storage yang berbeda di masing-masing tab/window.
+- Menutup tab/window akan mengakhiri session dan menghapus data yang tersimpan di session storage pada tab/window tersebut.
+- Data yang tersimpan dalam session storage harus berbentuk string.
+- Hanya dapat menyimpan data sebanyak 5MB.
 
+```javascript
+// menambah session storage
+sessionStorage.setItem('key', value);
+```
+
+##### **Session Storage Mengambil Data**
+Setelah kita mempelajari cara menyimpan data di session storage, pada topik ini kita akan belajar bagaimana kita dapat mengambil dan mengolah data dari session storage.
+
+Sama seperti local storage, cara mendapatkan data dari session storage juga menggunakan getItem(), seperti berikut ini:
+
+```javascript
+// mendapatkan session storage
+sessionStorage.getItem('key');
+```
