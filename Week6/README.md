@@ -353,14 +353,57 @@ Props digunakan agar component memiliki data yang dinamis yang dikirim dari comp
 
 #### **HOOKS**
 
-##### What is Hooks?
+##### **What is Hooks**?
 
-- Hooks is a new fiture from reactJS in 2018
-- Hooks memudahkan penggunaan functional components agar bisa menggunakan state, dan lifesycle lainnya.
+- **Hooks** is a new fiture from reactJS in 2018
+- **Hooks** memudahkan penggunaan functional components agar bisa menggunakan state, dan lifesycle lainnya.
 - Sebelumnya state(setState) dan lifecycle(componentDidMount, componentDidUpdate) hanya bisa digunakan di class component, namun dengan hooks kita bisa menggunakannya di functinal component.
 - Hooks yang sering digunakan adalah
   - useState
   - useEffect
 - Perbedaan functional component dengan class componennt
 - Persamaannya kedua hal ini menghasilkan hal yang sama, namun class menggunakan state dan functional menggunakan state hooks
-  -Kelebihan penggunaan Hooks - Code terlihan lebih clean dan pendek - Code lebih mudah dimengerti
+- Kelebihan penggunaan Hooks 
+    - Code terlihan lebih clean dan pendek 
+    - Code lebih mudah dimengerti
+- Perbedaan dengan class
+    - Class menggunakan state
+        ![image](https://user-images.githubusercontent.com/82355658/199018224-34ccf591-beeb-4855-b4e8-868516240d8c.png)
+    - Functional menggunakan state hooks
+        ![image](https://user-images.githubusercontent.com/82355658/199018299-ad08da78-3eea-471c-9cce-605beeebb819.png)
+    - Hasil : 
+        ![image](https://user-images.githubusercontent.com/82355658/199018938-1ce5cd03-5684-463e-bb04-e9a449b5c8c2.png)
+- Kelebihan penggunaan hooks
+    - Functional Component dan menggunakan hooks, maka code akan terlihat lebih clean, pendek, dan meudah dimengerti
+    - Tim yang sudah mendevelop React pun, merekomedasikan untuk mulai menggunakan hooks karena lebih mudah dimengerti.
+
+#### **useState**
+1. Import useState dari react
+2. Menuliskan useState hooks
+3. Pemanggilan data
+4. Update state
+![image](https://user-images.githubusercontent.com/82355658/199020945-e9d42cf4-f2e4-47d5-a5fd-a48843753c09.png)
+
+#### **Update State**
+- State, bisa kita ubah menggunakan variable kedua dari state hooks contohnya jika memiliki kode seperti ini
+```javascript
+const [nama, setNama] = useState("Luthfi");
+```
+MAka kita tinggal menggunakan setNama() untuk mengupdatenya
+
+#### **lifeCycle**
+- ``lifeCycle`` seperti lingkaran kehidupan selama 24 jam mulai dari 
+- ``lifeCycle`` yang ada di dalam hooks, hanya menggunakan useEffect yang menyatukan:
+ - componentDidMount
+ - componentDidUpdate
+ - componentWillUnmount 
+
+ #### **useEffect**
+- ``useEffect`` bisa dimasukkan sebelum melakukan render
+- ``useEffect`` sendiri biasanya ditempatkan dibawah ``useState``
+- Cara penggunaan useEffect
+    - import useEffect
+    - Tuliskan penggunaan useEffect hooks sebelum render
+
+
+
